@@ -68,3 +68,28 @@ php artisan make:model Kas --migration
 command tersebut akan menggenerate 2 file yaitu:
 `Kas.php` path : App/
 `create-kas-table` path : database/migrations
+
+
+# caseflow
+1. route
+2. controller
+3. model
+4. migration
+
+### Route
+file route ada di `routes/web.php` contoh route
+``` php
+Route::get('/{nama_route}',function(){
+  return "Apa";
+});
+```
+user request `nama_route` kemudian route mengembalikan `Apa`
+
+### Controller
+file pathnya ada di : `App\Http\Controllers\{nama_controller}`, membuat controller baru :
+> php artisan make:controller {{nama_controller}}
+
+```
+php artisan make:controller KasController
+```
+command tersebut akan menggenerate file `KasController.php`
